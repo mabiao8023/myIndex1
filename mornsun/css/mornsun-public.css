@@ -1,0 +1,380 @@
+/*header样式*/
+/*对头部所有的a设置超链接样式*/
+header a:link,header a:visited{
+	color:#fff;
+	font-weight:bold;
+}
+header a:hover,header a:active{
+	color:#0f0;
+}
+header{/*对头部进行固定定位，使其一直固定显示在页面顶部*/
+	position:fixed;
+	top:0;
+	width:100%;
+	height:100px;
+	background-color:#0081cc;
+	z-index:3;
+}
+/*logo区域居中样式*/
+header .logo{
+	width:1000px;
+	margin:0 auto;
+}
+header .logo_left{
+	height:60px;
+}
+header .logo_left img{
+	width:345px;
+	height:25px;
+	margin:20px 0 15px 6px;
+}
+/*居中语言切换的样式设置*/
+header .logo_center{
+	margin-top:20px;
+}
+header .logo_center li{	
+	height:25px;
+	margin-left:25px;
+	padding-left:30px;
+	line-height:25px;
+}
+header .language{/*添加背景图*/
+	background:url("../images/english.png") no-repeat left center;
+}
+header .login{/*添加背景图*/
+	background:url("../images/login.png") no-repeat left center;
+}
+header .logo_right input{/*为什么要去css/images下面去找图片???因为相对路径有问题*/
+	width:150px;
+	height:23px;
+	margin-top:20px;
+	margin-left:50px;
+	border:0;
+	padding-left:5px;
+	color:#222;
+}
+header .logo_right #searchBox{
+	width:50px;
+	text-align:center;
+	margin-left:0px;
+	background:#0081cc;
+	border:1px solid #fff;
+	color:#fff;
+	cursor:pointer;
+}
+header .logo_right #searchBox:hover{
+	background:#0090cc;
+}
+header .logo_right #searchBox:active{
+	background:#fff;
+	color:#0081cc;
+}
+/*nav样式开始*/
+header .nav{
+	width:1000px;
+	height:40px;
+	margin:0 auto;
+}
+header .nav>ul{
+	width:100%;
+}
+header .nav>ul>li{
+	text-align:center;
+	transition:background 0.3s ease-in;
+
+}
+header .nav>ul>li>a{
+	display:inline-block;
+	width:120px;
+	font-size:14px;
+	padding:11px 0;
+	/*border-right:1px solid #fff;*/
+}
+/*nav中的隐藏效果的实现*/
+header .nav1-content{
+	display:none;/*隐藏元素，且元素的内容脱离当前文档流实现*/
+	position:absolute;
+	left:0;
+	top:98px;
+	width:100%;
+	z-index:200;
+}
+header .nav1-main{	/*设置隐藏区域的大小*/
+
+	background:#fff;
+}
+header .nav>ul>li:hover{
+	background:#fff;
+}
+
+header .nav>ul>li:hover>a{
+	color:#0081cc;
+}
+header .nav li:hover .nav1-content{/*悬浮时隐藏的文档显示，并且层次设置过高*/
+	display:block;
+	border-bottom:2px solid #2BA8F2;
+	z-index:20;/*层高可在不影响其他元素的情况下，自由设置*/
+}
+header .nav .nav_Choose{
+	border-right:0;
+}
+/*产品中心显示内容的样式*/
+header .product-center{
+	width:1000px;
+	padding-bottom:8px;
+	margin:0 auto;
+	color:#3e3e3e;
+}
+header .product-center li{
+	margin:8px 0;
+}
+header .product-center-left{
+	width:640px;
+	margin-left:10px;
+}
+header .product-center-right{
+	width:202px;
+	margin-right:55px;
+	margin-top:20px;
+}
+/*产品中心右边内容的样式*/
+header .product-center-right-middle{
+	width:71px;
+	height:19px;
+	background:#CCC;
+	text-align:right;
+	margin:10px 0;
+}
+header .product-center-right-middle a{
+	font-size:14px;
+	color:#fff;
+	background:#2BA8F2;
+}
+header .product-center-right ul li{
+	width:200px;
+	text-align:left;
+}
+header .product-center-right ul li a{
+	color:#3e3e3e;
+	margin:5px 0;
+	font-size:12px;
+	font-weight:normal;
+}
+/*产品中心左边内容的样式，分四列布局，每列布局样式一致，采用相同的样式*/
+header .product-center-left>div{
+	width:158px;
+	height:200px;
+}
+header .product-title{
+	margin-top:10px;
+	height:20px;
+	line-height:20px;
+	font-size:14px;
+	color:#414141;
+	font-weight:bold;
+	text-align:left;
+}
+header .product-center-left ul,.product-center-left ul li{
+	text-align:left;
+}
+header .product-center-left ul li{
+	height:12px;
+}
+header .product-center-left ul li a{
+	color:#414141;
+	font-size:12px;
+	font-weight:normal;
+}
+header .product-center-left p{
+	font-weight:bold;
+}
+header .nav1-main a:hover{
+	color:#0f0;
+}
+/*关于我们,样品申请，应用支持，新闻动态，联系我们显示内容的样式*/
+header .nav-common{
+	width:970px;
+	margin:0 auto;
+	overflow:hidden;
+	padding:18px 15px;
+}
+header .company{
+	width:202px;
+	/*height:280px;*/
+	text-align:left;
+	margin-right:40px;
+}
+header .company_information li{
+	text-align:left;
+	margin-top:8px;
+	width:200px;
+
+}
+header .nav-common a:link,.nav-common a:visited{
+	color:#414141;
+	font-weight:normal;
+	}
+header .nav-common a:hover,.nav-common a:active{
+	color:#0f0;
+}
+header .company_pic{
+	width:202px;
+	height:110px;
+	overflow:hidden;
+	margin-bottom:13px;
+}
+header .company_pic img{
+	width:215px;
+	height:125px;
+	transition:all 0.2s linear;
+}
+header .company_pic img:hover{
+	width:202px;
+	height:110px;
+}
+header .company_title{
+	background:#ccc;
+	padding-left:20px;
+	width:56px;
+	margin-bottom:25px;
+}
+header .company_title a{
+	color:#fff!important;
+	background:#0282CC;
+	font-size:14px;
+}
+header .exchange p{
+	margin:5px 0;
+	padding:0;
+	text-align:left;
+}
+header .exchange .exchange_title{
+	margin-bottom:15px;
+	text-align:right;
+}
+header .exchange_title{
+	padding:20px;
+	background:#ccc;
+}
+header .exchange_title a{
+	color:#fff!important;
+	background:#0282CC;
+	font-size:14px;
+	font-weight:normal;
+}
+header .exchange img{
+	width:133px;
+	height:133px;
+}
+/*尾部信息*/
+#footer{
+	height:100px;
+	background:#e8e8e8;
+	border-top:2px solid #0081cc;
+	color:#666;
+}
+#footer #footer-main{
+	width:1000px;
+	margin:0 auto;
+	overflow:hidden;
+}
+#footer_left{
+	width:890px;
+	float:left;
+}
+#footer_left ul{
+	padding-top:20px;
+	overflow:hidden;
+}
+/*使用列表的方式实现**/
+#footer_left ul li{	
+	float:left;
+	border-right:1px solid #999;
+	padding:0 15px;
+}
+/*去掉最后list的边框**/
+#footer_left ul li.complain{
+	border-right:none;
+}
+/*左侧微信图片设置**/
+#footer-main #weixin{
+	width:110px;
+	height:100px;
+	float:right;
+	text-align:right;
+}
+#footer-main #weixin img{
+	width:100px;
+	height:80px;
+	margin-top:20px;
+	vertical-align:middle;
+}
+/*去掉p的上下外边距**/
+#footer_left .copy{
+	text-align:right;
+}
+#footer_left p{
+	margin:10px 0;
+	padding-left:14px;
+}
+#footer a:hover,#footer a:active{
+	color:#25A0CC;
+}
+#aside{
+	width:110px;
+	height:190px;
+	position:fixed;
+	bottom:0;
+	left:0;
+	z-index:1;
+	background-image:linear-gradient(to top,#0059A2 0px,#0059A2 150px,#fff 190px);
+}
+#aside ul li a{
+	display:block;
+	height:35px;
+	line-height:35px;
+	width:110px;
+	font-weight:bold;
+	text-align:center;
+	font-size:14px;
+	color:#fff;
+	transition:background .2s linear;
+}
+#aside ul li a:hover{
+	background:#fff;
+	color:#0059A2;
+}
+@media only screen and (max-width:800px){
+	#aside,#video{
+		display:none;
+	}
+}
+#video{
+	position:fixed;
+	bottom:-253px;
+	right:0;
+}
+#video video{
+	background-color:#000;
+}
+#video p{
+	position:absolute;
+	top:0;
+	right:0;
+	margin:0;
+	padding:0;
+	color:#fff;
+	font-size:20px;
+	cursor:pointer;
+}
+#video p:hover{
+	color:#f00;
+	text-shadow:0px 0px 8px #fff;
+}
+#video img{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	display:none;
+}
